@@ -1,19 +1,31 @@
 {
     "manifest_version": 2,
     "name": "Piper",
-    "description": "Redirect YouTube links to Piped (piped.kavin.rocks).",
     "version": "1.0",
+    "description": "Redirect YouTube links to Piped (piped.kavin.rocks).",
     "author": "Erazem Kokot",
-    "homepage_url": "https://git.sr.ht/~erazemk/piper",
-    "background": {"scripts": ["background.js"]},
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
     "permissions": [
         "webRequest",
         "webRequestBlocking",
         "*://youtube.com/*",
         "*://www.youtube.com/*"
     ],
+
     "icons": {
         "48": "icons/48x48.png",
         "128": "icons/128x128.png"
-    }
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "contact@erazem.eu"
+        }
+      }
 }
